@@ -1,0 +1,42 @@
+{
+  "name": "next-firebase-mui-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "update:models": "(npm --prefix functions/models run build) && (npm install models)",
+    "postinstall": "npm run update:models",
+    "emulate": "(npm --prefix functions run build -- --watch) | (firebase emulators:start --import=./test_data --export-on-exit)"
+  },
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@hookform/resolvers": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@sentry/nextjs": "latest",
+    "@svgr/webpack": "latest",
+    "firebase": "latest",
+    "firebase-admin": "latest",
+    "firebaseui": "latest",
+    "models": "file:functions/models",
+    "next": "latest",
+    "next-firebase-auth-edge": "^0.11.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-hook-form": "latest",
+    "use-async-effect": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest"
+  }
+}
